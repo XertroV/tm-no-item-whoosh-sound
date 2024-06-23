@@ -81,6 +81,7 @@ class MemPatcher {
             // origBytes[i] = Dev::Patch(ptr + offsets[i], newBytes[i]);
             trace('Patched: ' + patternDisplay + ' at ' + offsets[i] + ' with ' + newBytes[i] + ' (was ' + origBytes[i] + ')');
         }
+        NotifySuccess("Patch Applied.");
     }
 
     void Unapply() {
@@ -90,10 +91,16 @@ class MemPatcher {
             Dev::Patch(ptr + offsets[i], origBytes[i]);
         }
         trace('Unpatched: ' + patternDisplay + ' at ' + offsets[0]);
+        NotifySuccess("Patch Unapplied.");
     }
 }
 
 void NotifyError(const string &in msg) {
     warn(msg);
     UI::ShowNotification(Meta::ExecutingPlugin().Name + ": Error", msg, vec4(.9, .3, .1, .3), 15000);
+}
+
+void NotifySuccess(const string &in msg) {
+    UI::ShowNotification(Meta::ExecutingPlugin().Name, msg, vec4(.4, .7, .1, .3), 5000);
+    trace("Notified: " + msg);
 }

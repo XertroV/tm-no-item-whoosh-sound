@@ -10,7 +10,7 @@ MemPatcher@ PatchNoWhooshDecoItems = MemPatcher(
 );
 
 void Main() {
-    yield();
+    yield(60);
     if (S_PatchActive) {
         PatchNoWhooshDecoItems.Apply();
     }
