@@ -1,0 +1,75 @@
+
+
+
+
+
+
+Trackmania.exe.text+13208EF - 4C 8B 6C 24 58        - mov r13,[rsp+58] { actually hook here }
+Trackmania.exe.text+13208F4 - 41 89 86 D8000000     - mov [r14+000000D8],eax { hook here }
+Trackmania.exe.text+13208FB - 8B 4C 24 48           - mov ecx,[rsp+48]
+Trackmania.exe.text+13208FF - 48 8B 55 F0           - mov rdx,[rbp-10]
+Trackmania.exe.text+1320903 - FF C1                 - inc ecx
+Trackmania.exe.text+1320905 - F3 44 0F10 44 24 30   - movss xmm8,[rsp+30]
+Trackmania.exe.text+132090C - 48 FF C2              - inc rdx
+Trackmania.exe.text+132090F - F3 44 0F10 0D ACA99800  - movss xmm9,[Trackmania.exe.rdata+39C2C4] { (100.00) }
+
+
+
+
+populated in CurChallenge_SetUp
+
+
+
+0F 85 E7 01 00 00 49 83 BF 98 02 00 00 00 0F 84 9D 00 00 00 F3 0F 10 46 2C 48 8D 56 08 F3 0F 10 4A 28 48 8D 4D F0 F3 0F 11 45 00 F3 0F 10 42 2C F3 0F 11 45 08 F3 0F 11 4D 04 E8 F9 C7 16 FF
+0F 85 ?? ?? 00 00 49 83 BF ?? ?? 00 00 00 0F 84 ?? 00 00 00 F3 0F 10 46 ?? 48 8D 56 ?? F3 0F 10 4A ?? 48 8D 4D ?? F3 0F 11 45 00 F3 0F 10 42 ??
+// -- unique at this point:                                |
+0F 85 ?? ?? 00 00 49 83 BF ?? ?? 00 00 00 0F 84 ?? 00 00 00 F3 0F 10 46 ??
+90 E9   // <<<--- patch
+
+Trackmania.exe+1016108 - 0F85 E7010000         - jne Trackmania.exe.text+10152F5 { jne -> jmp to skip sounds?
+
+
+ }
+Trackmania.exe+101610E - 49 83 BF 98020000 00  - cmp qword ptr [r15+00000298],00 { 0 }
+Trackmania.exe+1016116 - 0F84 9D000000         - je Trackmania.exe.text+10151B9 { ->Trackmania.exe+10161B9 }
+Trackmania.exe+101611C - F3 0F10 46 2C         - movss xmm0,[rsi+2C]
+Trackmania.exe+1016121 - 48 8D 56 08           - lea rdx,[rsi+08]
+Trackmania.exe+1016125 - F3 0F10 4A 28         - movss xmm1,[rdx+28]
+Trackmania.exe+101612A - 48 8D 4D F0           - lea rcx,[rbp-10]
+Trackmania.exe+101612E - F3 0F11 45 00         - movss [rbp+00],xmm0
+Trackmania.exe+1016133 - F3 0F10 42 2C         - movss xmm0,[rdx+2C]
+Trackmania.exe+1016138 - F3 0F11 45 08         - movss [rbp+08],xmm0
+Trackmania.exe+101613D - F3 0F11 4D 04         - movss [rbp+04],xmm1
+Trackmania.exe+1016142 - E8 F9C716FF           - call Trackmania.exe.text+181940 { ->Trackmania.exe+182940 }
+Trackmania.exe+1016147 - 49 8B CC              - mov rcx,r12
+
+
+
+
+
+
+
+Trackmania.exe+1016108 - E9 E8010000           - jmp Trackmania.exe.text+10152F5 { jne -> jmp to skip sounds?
+
+
+ }
+Trackmania.exe+101610D - 90                    - nop
+Trackmania.exe+101610E - 49 83 BF 98020000 00  - cmp qword ptr [r15+00000298],00 { 0 }
+Trackmania.exe+1016116 - 0F84 9D000000         - je Trackmania.exe.text+10151B9 { ->Trackmania.exe+10161B9 }
+Trackmania.exe+101611C - F3 0F10 46 2C         - movss xmm0,[rsi+2C]
+Trackmania.exe+1016121 - 48 8D 56 08           - lea rdx,[rsi+08]
+Trackmania.exe+1016125 - F3 0F10 4A 28         - movss xmm1,[rdx+28]
+Trackmania.exe+101612A - 48 8D 4D F0           - lea rcx,[rbp-10]
+Trackmania.exe+101612E - F3 0F11 45 00         - movss [rbp+00],xmm0
+Trackmania.exe+1016133 - F3 0F10 42 2C         - movss xmm0,[rdx+2C]
+Trackmania.exe+1016138 - F3 0F11 45 08         - movss [rbp+08],xmm0
+Trackmania.exe+101613D - F3 0F11 4D 04         - movss [rbp+04],xmm1
+Trackmania.exe+1016142 - E8 F9C716FF           - call Trackmania.exe.text+181940 { ->Trackmania.exe+182940 }
+Trackmania.exe+1016147 - 49 8B CC              - mov rcx,r12
+Trackmania.exe+101614A - E8 A1E862FF           - call Trackmania.exe.text+6439F0 { ->Trackmania.exe+6449F0 }
+Trackmania.exe+101614F - 4D 8B 87 98020000     - mov r8,[r15+00000298]
+Trackmania.exe+1016156 - 4C 8D 8D 70010000     - lea r9,[rbp+00000170]
+Trackmania.exe+101615D - 48 8B F8              - mov rdi,rax
+Trackmania.exe+1016160 - 48 8D 4D 80           - lea rcx,[rbp-80]
+Trackmania.exe+1016164 - 33 C0                 - xor eax,eax
+Trackmania.exe+1016166 - 48 8B D7              - mov rdx,rdi
