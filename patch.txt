@@ -73,3 +73,177 @@ Trackmania.exe+101615D - 48 8B F8              - mov rdi,rax
 Trackmania.exe+1016160 - 48 8D 4D 80           - lea rcx,[rbp-80]
 Trackmania.exe+1016164 - 33 C0                 - xor eax,eax
 Trackmania.exe+1016166 - 48 8B D7              - mov rdx,rdi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Trackmania.exe+1016108 - 0F85 E7010000         - jne Trackmania.exe.text+10152F5 { some items jump here
+ }
+Trackmania.exe+101610E - 49 83 BF 98020000 00  - cmp qword ptr [r15+00000298],00 { 0 }
+Trackmania.exe+1016116 - 0F84 9D000000         - je Trackmania.exe.text+10151B9 { wtmt jump
+ }
+Trackmania.exe+101611C - F3 0F10 46 2C         - movss xmm0,[rsi+2C]
+Trackmania.exe+1016121 - 48 8D 56 08           - lea rdx,[rsi+08]
+Trackmania.exe+1016125 - F3 0F10 4A 28         - movss xmm1,[rdx+28]
+Trackmania.exe+101612A - 48 8D 4D F0           - lea rcx,[rbp-10]
+Trackmania.exe+101612E - F3 0F11 45 00         - movss [rbp+00],xmm0
+Trackmania.exe+1016133 - F3 0F10 42 2C         - movss xmm0,[rdx+2C]
+Trackmania.exe+1016138 - F3 0F11 45 08         - movss [rbp+08],xmm0
+Trackmania.exe+101613D - F3 0F11 4D 04         - movss [rbp+04],xmm1
+Trackmania.exe+1016142 - E8 F9C716FF           - call Trackmania.exe.text+181940 { ->Trackmania.exe+182940 }
+Trackmania.exe+1016147 - 49 8B CC              - mov rcx,r12
+Trackmania.exe+101614A - E8 A1E862FF           - call Trackmania.exe.text+6439F0 { ->Trackmania.exe+6449F0 }
+Trackmania.exe+101614F - 4D 8B 87 98020000     - mov r8,[r15+00000298]
+Trackmania.exe+1016156 - 4C 8D 8D 70010000     - lea r9,[rbp+00000170]
+Trackmania.exe+101615D - 48 8B F8              - mov rdi,rax
+Trackmania.exe+1016160 - 48 8D 4D 80           - lea rcx,[rbp-80]
+Trackmania.exe+1016164 - 33 C0                 - xor eax,eax
+Trackmania.exe+1016166 - 48 8B D7              - mov rdx,rdi
+Trackmania.exe+1016169 - 48 89 45 80           - mov [rbp-80],rax
+Trackmania.exe+101616D - 89 45 88              - mov [rbp-78],eax
+Trackmania.exe+1016170 - 0F28 45 80            - movaps xmm0,[rbp-80]
+Trackmania.exe+1016174 - 66 0F7F 85 70010000   - movdqa [rbp+00000170],xmm0
+Trackmania.exe+101617C - E8 6F1063FF           - call Trackmania.exe.text+6461F0 { ->Trackmania.exe+6471F0 }
+Trackmania.exe+1016181 - 4C 8D 45 F0           - lea r8,[rbp-10]
+Trackmania.exe+1016185 - 48 8B CF              - mov rcx,rdi
+Trackmania.exe+1016188 - 8B 10                 - mov edx,[rax]
+Trackmania.exe+101618A - 33 C0                 - xor eax,eax
+Trackmania.exe+101618C - 48 89 45 80           - mov [rbp-80],rax
+Trackmania.exe+1016190 - 89 45 88              - mov [rbp-78],eax
+Trackmania.exe+1016193 - 48 8D 85 70010000     - lea rax,[rbp+00000170]
+Trackmania.exe+101619A - 0F28 45 80            - movaps xmm0,[rbp-80]
+Trackmania.exe+101619E - 66 0F7F 85 70010000   - movdqa [rbp+00000170],xmm0
+Trackmania.exe+10161A6 - 48 89 44 24 20        - mov [rsp+20],rax
+Trackmania.exe+10161AB - 89 96 E4000000        - mov [rsi+000000E4],edx
+Trackmania.exe+10161B1 - E8 0A1263FF           - call Trackmania.exe.text+6463C0 { ->Trackmania.exe+6473C0 }
+Trackmania.exe+10161B6 - 8B 46 68              - mov eax,[rsi+68]
+Trackmania.exe+10161B9 - A8 01                 - test al,01 { 1 }
+Trackmania.exe+10161BB - 0F85 34010000         - jne Trackmania.exe.text+10152F5 { ->Trackmania.exe+10162F5 }
+Trackmania.exe+10161C1 - 49 8B CF              - mov rcx,r15
+Trackmania.exe+10161C4 - E8 D7FBA2FF           - call Trackmania.exe.text+A44DA0 { ->Trackmania.exe+A45DA0 }
+Trackmania.exe+10161C9 - 85 C0                 - test eax,eax
+Trackmania.exe+10161CB - 0F84 24010000         - je Trackmania.exe.text+10152F5 { ->Trackmania.exe+10162F5 }
+Trackmania.exe+10161D1 - 49 8B CF              - mov rcx,r15
+Trackmania.exe+10161D4 - E8 D701A3FF           - call Trackmania.exe.text+A453B0 { ->Trackmania.exe+A463B0 }
+Trackmania.exe+10161D9 - 4C 8B E8              - mov r13,rax
+Trackmania.exe+10161DC - 48 85 C0              - test rax,rax
+Trackmania.exe+10161DF - 74 49                 - je Trackmania.exe.text+101522A { WTMT jumps here
+ }
+Trackmania.exe+10161E1 - 48 8B B8 10010000     - mov rdi,[rax+00000110]
+Trackmania.exe+10161E8 - 48 85 FF              - test rdi,rdi
+Trackmania.exe+10161EB - 74 10                 - je Trackmania.exe.text+10151FD { ->Trackmania.exe+10161FD }
+Trackmania.exe+10161ED - 48 8B 4D C0           - mov rcx,[rbp-40]
+Trackmania.exe+10161F1 - 48 8B D7              - mov rdx,rdi
+Trackmania.exe+10161F4 - 48 8B 49 20           - mov rcx,[rcx+20]
+Trackmania.exe+10161F8 - E8 731DACFF           - call Trackmania.exe.text+AD6F70 { ->Trackmania.exe+AD7F70 }
+Trackmania.exe+10161FD - 41 0F10 85 18010000   - movups xmm0,[r13+00000118]
+Trackmania.exe+1016205 - 41 0F10 8D 28010000   - movups xmm1,[r13+00000128]
+Trackmania.exe+101620D - 0F11 45 F0            - movups [rbp-10],xmm0
+Trackmania.exe+1016211 - 41 0F10 85 38010000   - movups xmm0,[r13+00000138]
+Trackmania.exe+1016219 - 0F11 4D 00            - movups [rbp+00],xmm1
+Trackmania.exe+101621D - 0F11 45 10            - movups [rbp+10],xmm0
+Trackmania.exe+1016221 - 48 85 FF              - test rdi,rdi
+Trackmania.exe+1016224 - 0F85 BE010000         - jne Trackmania.exe.text+10153E8 { ->Trackmania.exe+10163E8 }
+Trackmania.exe+101622A - F3 0F10 55 AC         - movss xmm2,[rbp-54]
+Trackmania.exe+101622F - 33 FF                 - xor edi,edi
+Trackmania.exe+1016231 - 44 0F2F C2            - comiss xmm8,xmm2
+Trackmania.exe+1016235 - 8B C7                 - mov eax,edi
+Trackmania.exe+1016237 - 0F97 C0               - seta al
+Trackmania.exe+101623A - 85 C0                 - test eax,eax
+Trackmania.exe+101623C - 0F85 F1010000         - jne Trackmania.exe.text+1015433 { WTMT skips
+ }
+Trackmania.exe+1016242 - F3 0F10 4D B0         - movss xmm1,[rbp-50]
+Trackmania.exe+1016247 - 0F2F CA               - comiss xmm1,xmm2
+Trackmania.exe+101624A - F3 0F10 5D B4         - movss xmm3,[rbp-4C]
+Trackmania.exe+101624F - 72 05                 - jb Trackmania.exe.text+1015256 { WTMT jumps
+ }
+Trackmania.exe+1016251 - 0F28 EA               - movaps xmm5,xmm2
+Trackmania.exe+1016254 - EB 03                 - jmp Trackmania.exe.text+1015259 { ->Trackmania.exe+1016259 }
+Trackmania.exe+1016256 - 0F28 E9               - movaps xmm5,xmm1
+Trackmania.exe+1016259 - 0F2F D1               - comiss xmm2,xmm1
+Trackmania.exe+101625C - F3 0F5D EB            - minss xmm5,xmm3
+Trackmania.exe+1016260 - 72 05                 - jb Trackmania.exe.text+1015267 { Other things don't jump?
+ }
+Trackmania.exe+1016262 - 0F28 C2               - movaps xmm0,xmm2
+Trackmania.exe+1016265 - EB 03                 - jmp Trackmania.exe.text+101526A { WTMT jumps
+ }
+Trackmania.exe+1016267 - 0F28 C1               - movaps xmm0,xmm1
+Trackmania.exe+101626A - 0F2F 2D 5B5EC900      - comiss xmm5,[Trackmania.exe.rdata+39C0CC] { (5.00) }
+Trackmania.exe+1016271 - F3 0F10 35 7782C900   - movss xmm6,[Trackmania.exe.rdata+39E4F0] { (Nan) }
+Trackmania.exe+1016279 - F3 0F5F C3            - maxss xmm0,xmm3
+Trackmania.exe+101627D - 0F28 E1               - movaps xmm4,xmm1
+Trackmania.exe+1016280 - F3 0F59 E2            - mulss xmm4,xmm2
+Trackmania.exe+1016284 - F3 0F59 E3            - mulss xmm4,xmm3
+Trackmania.exe+1016288 - 0F54 E6               - andps xmm4,xmm6
+Trackmania.exe+101628B - 0F87 A2010000         - ja Trackmania.exe.text+1015433 { WTMT skips
+ }
+Trackmania.exe+1016291 - F3 0F10 2D 8358C900   - movss xmm5,[Trackmania.exe.rdata+39BB1C] { (0.50) }
+Trackmania.exe+1016299 - 0F2F E8               - comiss xmm5,xmm0
+Trackmania.exe+101629C - 0F87 91010000         - ja Trackmania.exe.text+1015433 { WTMT skips
+ }
+Trackmania.exe+10162A2 - F3 0F10 05 D257C900   - movss xmm0,[Trackmania.exe.rdata+39BA7C] { (0.35) }
+Trackmania.exe+10162AA - 0F2F C4               - comiss xmm0,xmm4
+Trackmania.exe+10162AD - 0F87 80010000         - ja Trackmania.exe.text+1015433 { WTMT skips
+
+ }
+Trackmania.exe+10162B3 - 0F2F 25 8E5FC900      - comiss xmm4,[Trackmania.exe.rdata+39C248] { (50.00) }
+Trackmania.exe+10162BA - 4C 8B 6D C0           - mov r13,[rbp-40]
+Trackmania.exe+10162BE - 77 37                 - ja Trackmania.exe.text+10152F7 { WTMT jumps
+ }
+Trackmania.exe+10162C0 - F3 0F59 4E 18         - mulss xmm1,[rsi+18]
+Trackmania.exe+10162C5 - F3 0F59 56 14         - mulss xmm2,[rsi+14]
+Trackmania.exe+10162CA - F3 0F59 5E 1C         - mulss xmm3,[rsi+1C]
+Trackmania.exe+10162CF - F3 0F58 CA            - addss xmm1,xmm2
+Trackmania.exe+10162D3 - F3 0F58 CB            - addss xmm1,xmm3
+Trackmania.exe+10162D7 - 0F54 CE               - andps xmm1,xmm6
+Trackmania.exe+10162DA - 0F2F E9               - comiss xmm5,xmm1
+Trackmania.exe+10162DD - 73 18                 - jae Trackmania.exe.text+10152F7 { ->Trackmania.exe+10162F7 }
+Trackmania.exe+10162DF - 49 8B 7D 30           - mov rdi,[r13+30] { could this determine sound stuff?
+ }
+Trackmania.exe+10162E3 - 48 8D 4D F0           - lea rcx,[rbp-10]
+Trackmania.exe+10162E7 - E8 04E015FF           - call Trackmania.exe.text+1732F0 { ->Trackmania.exe+1742F0 }
+Trackmania.exe+10162EC - 48 85 FF              - test rdi,rdi
+Trackmania.exe+10162EF - 0F85 F7000000         - jne Trackmania.exe.text+10153EC { NonWTMT jumps (SOUND STUFF)
+
+ }
+Trackmania.exe+10162F5 - 33 FF                 - xor edi,edi { From jump returns here
+ }
+Trackmania.exe+10162F7 - 48 8D 8D D0000000     - lea rcx,[rbp+000000D0]
+Trackmania.exe+10162FE - E8 AD900FFF           - call Trackmania.exe.text+10E3B0 { ->Trackmania.exe+10F3B0 }
+Trackmania.exe+1016303 - 8B 86 98000000        - mov eax,[rsi+00000098]
+Trackmania.exe+1016309 - 0F28 B4 24 D0020000   - movaps xmm6,[rsp+000002D0]
+Trackmania.exe+1016311 - FF C8                 - dec eax
+Trackmania.exe+1016313 - 83 F8 FD              - cmp eax,-03 { 253 }
+Trackmania.exe+1016316 - 77 17                 - ja Trackmania.exe.text+101532F { WTMT jumps
+ }
+Trackmania.exe+1016318 - 89 BE 98000000        - mov [rsi+00000098],edi
+Trackmania.exe+101631E - C7 86 9C000000 FFFFFFFF - mov [rsi+0000009C],FFFFFFFF { -1 }
+Trackmania.exe+1016328 - 48 89 BE A0000000     - mov [rsi+000000A0],rdi
+Trackmania.exe+101632F - 48 83 BE C0000000 00  - cmp qword ptr [rsi+000000C0],00 { 0 }
+Trackmania.exe+1016337 - 74 07                 - je Trackmania.exe.text+1015340 { WTMT jumps
+ }
+Trackmania.exe+1016339 - 48 89 BE C0000000     - mov [rsi+000000C0],rdi
+Trackmania.exe+1016340 - F6 46 68 01           - test byte ptr [rsi+68],01 { 1 }
+Trackmania.exe+1016344 - 0F85 2F080000         - jne Trackmania.exe.text+1015B79 { WTMT skips
+ }
+Trackmania.exe+101634A - 4D 8B 65 00           - mov r12,[r13+00]
+Trackmania.exe+101634E - 4D 85 F6              - test r14,r14
+Trackmania.exe+1016351 - 0F84 92040000         - je Trackmania.exe.text+10157E9 { WTMT skips
+ }

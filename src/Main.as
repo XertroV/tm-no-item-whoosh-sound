@@ -9,6 +9,9 @@ MemPatcher@ PatchNoWhooshDecoItems = MemPatcher(
     {0}, {"90 E9"}
 );
 
+// Note: this is at the end of the loop, just before incrementing the indexes (there are 2, rcx and rdx)
+// 4C 8B 6C 24 58 41 89 86 D8 00 00 00 8B 4C 24 48 48 8B 55 F0 FF C1 F3 44 0F 10 44 24 30 48 FF C2
+
 void Main() {
     yield(60);
     if (S_PatchActive) {
